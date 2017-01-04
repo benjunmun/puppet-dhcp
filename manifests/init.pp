@@ -19,6 +19,8 @@ class dhcp (
   $dnskeyname           = undef,
   $ddns_update_static   = 'on',
   $ddns_update_optimize = 'on',
+  $ddns_primary         = undef,
+  $ddns_primary_ipv6    = undef,
   $pxeserver            = undef,
   $pxefilename          = undef,
   $mtu                  = undef,

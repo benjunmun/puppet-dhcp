@@ -103,6 +103,8 @@ The following is the list of all parameters available for this class.
 | `ddns_update_static`   | String    | `'on'`                            |
 | `ddns_update_style`    | String    | `'interim'`                       |
 | `ddns_update_optimize` | String    | `'on'`                            |
+| `ddns_primary`         | String    | `undef`                           |
+| `ddns_primary_ipv6`    | String    | `undef`                           |
 | `default_lease_time`   | Integer   | `43200`                           |
 | `dhcp_conf_ddns`       | String    | `'INTERNAL_TEMPLATE'`             |
 | `dhcp_conf_extra`      | String    | `'INTERNAL_TEMPLATE'`             |

@@ -13,10 +13,14 @@ use-host-decl-names on;
 include "<%= @dnsupdatekey %>";
 <% @dnsdomain_real.each do |dom| -%>
 zone <%= dom %>. {
-<% if @nameservers && !@nameservers.empty? -%>
+<% if @ddns_primary && !@ddns_primary.empty? -%>
+  primary <%= @ddns_primary %>;
+<% elsif @nameservers && !@nameservers.empty? -%>
   primary <%= @nameservers.first %>;
 <% end -%>
-<% if @nameservers_ipv6 && !@nameservers_ipv6.empty? -%>
+<% if @ddns_primary_ipv6 && !@ddns_primary_ipv6.empty? -%>
+  primary6 <%= @ddns_primary_ipv6 %>;
+<% elsif @nameservers_ipv6 && !@nameservers_ipv6.empty? -%>
   primary6 <%= @nameservers_ipv6.first %>;
 <% end -%>
   key <%= @_dnskeyname %>;
